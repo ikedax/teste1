@@ -1,0 +1,1437 @@
+<!-- Contêiner do texto oculto -->
+<div class="hidden-text-wrapper" style="display:inline-block; position:relative; cursor:pointer; margin:20px;">
+  <!-- Botão arredondado com desfoque -->
+  <button class="hidden-text-trigger" style="
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(50px);
+      border: none;
+      margin-top: 40px;
+      margin-left: 100px;
+      border-radius: 35px;
+      padding: 10px 20px;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  "
+  onmouseover="this.style.background='rgba(255,255,255,0.25)';"
+  onmouseout="this.style.background='rgba(255,255,255,0.15)';">
+    me clique 🤭
+  </button>
+
+  <!-- Texto secreto 1 -->
+  <div class="hidden-text-content" style="
+      display:none;
+      position:absolute;
+      margin-left: 50px;
+      top:120%;
+      left:50%;
+      transform:translateX(-50%);
+      background:rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      color:#fffff;
+      padding:15px 25px;
+      border-radius:15px;
+      box-shadow:0 0 15px rgba(0,0,0,0.2);
+      text-align:center;
+      font-family:sans-serif;
+      font-size:12px;
+      z-index:9999;
+      white-space:nowrap;
+  ">
+    amor, num esquece de dar play no btn verdinho! 🟢
+  </div>
+
+  <!-- Texto secreto 2 -->
+  <div class="hidden-text-content" style="
+      display:none;
+      position:absolute;
+      margin-left: 55px;
+      top:200%; /* um pouco abaixo do primeiro */
+      left:50%;
+      transform:translateX(-50%);
+      background:rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      color:#fffff;
+      padding:15px 20px;
+      border-radius:15px;
+      box-shadow:0 0 15px rgba(0,0,0,0.2);
+      text-align:center;
+      font-family:sans-serif;
+      font-size:8px;
+      z-index:9999;
+      white-space:nowrap;
+  ">
+    esse contador é só depois de oficializado, mas eu te amo a muito mais tempo bebê...❤️🤭
+  </div>
+</div>
+
+<script>
+// Alterna visibilidade de todos os textos ao clicar
+document.querySelectorAll('.hidden-text-wrapper').forEach(wrapper => {
+    const trigger = wrapper.querySelector('.hidden-text-trigger');
+    const contents = wrapper.querySelectorAll('.hidden-text-content');
+
+    trigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        contents.forEach(content => {
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
+    document.addEventListener('click', e => {
+        if(!wrapper.contains(e.target)){
+            contents.forEach(content => content.style.display = 'none');
+        }
+    });
+});
+</script>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lavinia eu te amo</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 100px; /* Espaço para o cabeçalho */
+    background: #121212;
+    color: #fff;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #1f1f1f;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    z-index: 9999;
+  }
+
+  header h1 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: #ff6b81;
+  }
+
+  .contador {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .bloco {
+    background: #ff6b81;
+    padding: 10px 15px;
+    border-radius: 12px;
+    min-width: 60px;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  }
+
+  .bloco span {
+    display: block;
+    font-size: 1.2rem;
+  }
+
+  .bloco small {
+    display: block;
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>💖 Lav, Eu te amo há:</h1>
+    <div class="contador" id="contador">
+      <div class="bloco"><span id="dias">0</span><small>dias</small></div>
+      <div class="bloco"><span id="horas">0</span><small>horas</small></div>
+      <div class="bloco"><span id="minutos">0</span><small>minutos</small></div>
+      <div class="bloco"><span id="segundos">0</span><small>segundos</small></div>
+    </div>
+  </header>
+
+  <!-- Conteúdo de exemplo -->
+  <main>
+    <div style="padding:20px;">
+        <p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+      
+      <h2>🩷🩷❤️🩷❤️🩷❤️❤️🩷🩷</h2>
+      
+      <p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>         
+      <p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+      <p>sempre que tiver pensamentos demais vem aqui pra lembrar do quanto você é amada e o quanto eu amo estar do lado em todos momentos. 
+      você é a garota mais querida desse mundo, não é atoa que minha mãe te ama e ela nunca gosta de ngm kkkk</p>
+      <p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+      
+      
+      <p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+      <h2>🩷🩷❤️🩷❤️🩷❤️❤️🩷🩷</h2>
+      <p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+    </div>
+  </main>
+
+  <script>
+    const dataInicio = new Date("June 14, 2025 00:00:00").getTime();
+
+    function atualizarContador() {
+      const agora = new Date().getTime();
+      let distancia = agora - dataInicio;
+
+      const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+      distancia %= (1000 * 60 * 60 * 24);
+
+      const horas = Math.floor    (distancia / (1000 * 60 * 60));
+      distancia %= (1000 * 60 * 60);
+
+      const minutos = Math.floor(distancia / (1000 * 60));
+      distancia %= (1000 * 60);
+
+      const segundos = Math.floor(distancia / 1000);
+
+      document.getElementById("dias").innerText = dias;
+      document.getElementById("horas").innerText = horas;
+      document.getElementById("minutos").innerText = minutos;
+      document.getElementById("segundos").innerText = segundos;
+    }
+
+    atualizarContador();
+    setInterval(atualizarContador, 1000);
+  </script>
+
+</body>
+</html>
+
+
+
+<!-- MOTIVOS -->
+
+<!-- Texto fofinho com partículas pastel -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
+  .fofo-wrapper {
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    overflow: visible;
+  }
+
+  .fofo-texto {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    background: linear-gradient(90deg, #ffb6d9, #ffe6a7, #b6f0ff, #d7b6ff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradFofo 6s ease infinite, brilhoFofo 3s ease-in-out infinite;
+    text-shadow: 0 0 12px rgba(255, 182, 217, 0.4);
+    transition: transform .3s ease;
+    display: inline-block;
+  }
+
+  @keyframes gradFofo {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes brilhoFofo {
+    0%, 100% { filter: drop-shadow(0 0 6px rgba(255, 200, 230, 0.6)); }
+    50% { filter: drop-shadow(0 0 16px rgba(255, 230, 180, 0.8)); }
+  }
+
+  .fofo-wrapper:hover .fofo-texto {
+    transform: scale(1.05) rotate(-1deg);
+  }
+
+  /* Partículas fofinhas */
+  .particula {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.7;
+    pointer-events: none;
+    animation: flutuar 6s linear infinite;
+  }
+
+  @keyframes flutuar {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: translateY(-40px) scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0) scale(1);
+      opacity: 0.8;
+    }
+  }
+</style>
+
+<div class="fofo-wrapper" id="textoFofo">
+  <span class="fofo-texto">💖 Motivos para te amar? 💖</span>
+</div>
+
+<script>
+  // Cria partículas pastel ao redor do texto
+  const wrapper = document.getElementById("textoFofo");
+  const cores = ["#ffb6d9", "#ffe6a7", "#b6f0ff", "#d7b6ff", "#c0ffc7"];
+
+  for (let i = 0; i < 18; i++) {
+    const p = document.createElement("span");
+    p.className = "particula";
+    const cor = cores[Math.floor(Math.random() * cores.length)];
+    const tamanho = Math.random() * 8 + 6; // entre 6px e 14px
+    p.style.width = tamanho + "px";
+    p.style.height = tamanho + "px";
+    p.style.background = cor;
+    p.style.left = (Math.random() * 100) + "%";
+    p.style.top = (Math.random() * 100) + "%";
+    p.style.animationDuration = (4 + Math.random() * 4) + "s";
+    wrapper.appendChild(p);
+  }
+</script>
+
+<div style="background:linear-gradient(135deg,#0a0a0a,#1a1a1a);padding:8px;border-radius:10px;max-height:200px;overflow-y:auto;font-family:Arial,sans-serif;color:#ffb6c1;">
+  <ul style="list-style:none;padding:0;margin:0;">
+    <li style="padding:2px 0;font-size:11px;">💖 porque no teu abraço eu encontro minha paz</li>
+    <li style="padding:2px 0;font-size:11px;">💖 porque você me faz sorrir até quando estou triste</li>
+    <li style="padding:2px 0;font-size:11px;">💖 pelo jeito especial que só você tem</li>
+    <li style="padding:2px 0;font-size:11px;">💖 porque eu amo teu cabelo</li>
+    <li style="padding:2px 0;font-size:11px;">💖 pelo teu sorriso</li>
+    <li style="padding:2px 0;font-size:11px;">💖 tua voz</li>
+    <li style="padding:2px 0;font-size:11px;">💖 teu toque</li>
+    <li style="padding:2px 0;font-size:11px;">💖 teu beijo</li>
+    <li style="padding:2px 0;font-size:11px;">💖 tua boca</li>
+    <li style="padding:2px 0;font-size:11px;">💖 teus lindos olhos</li>
+    <!-- ... continue até o Item 500 ... -->
+    <li style="padding:2px 0;font-size:11px;">💖 porque com você eu posso ser eu de verdade</li>
+    <li style="padding:2px 0;font-size:11px;">💖 o jeito com fala</li>
+    <li style="padding:2px 0;font-size:11px;">💖 porque nosso abraço sempre se encaixa</li>
+    <li style="padding:2px 0;font-size:11px;">💖 o jeito que você acorda toda perdidakkkk</li>
+    <li style="padding:2px 0;font-size:11px;">💖 teu café pura água kkkk</li>
+    <li style="padding:2px 0;font-size:11px;">💖 tua risada</li>
+    <li style="padding:2px 0;font-size:11px;">💖 porque você é extremamente cheirosa</li>
+    <li style="padding:2px 0;font-size:11px;">💖
+    porque você é simples mas muito especial</li>
+    <li style="padding:2px 0;font-size:11px;">💖
+    teu caráter</li>
+    <li style="padding:2px 0;font-size:11px;">💖 porque você me dá certeza</li>
+    <li style="padding:2px 0;font-size:11px;">💖 o jeito que você anda</li>
+    <li style="padding:2px 0;font-size:11px;">💖 porque você me apoia acima de tudo.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Tudo me lembra você.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Você faz tudo valer à pena.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Você me faz te querer em todo tempo.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Eu não consigo te esquecer, mesmo quando eu quero.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Você me ensinou o que é amar.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Você existe dentro de mim.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Você é o amor da minha vida.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Eu sonhei e esperei por você.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Você me apóia.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Você traz alegria pra minha vida.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Você faz meus sonhos serem reais</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Você vê em mim o que ninguém vê.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Você me deu asas e me fez voar.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Nenhuma estrela está fora do meu alcance quando estou com você.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Quando você toca minha mão eu me esqueço de respirar.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Eu tenho seu amor.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Você é minha inspiração.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Seu sorriso muda quando você me olha.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Seu olhar te entrega.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Sua voz é a que eu quero ouvir todos os dias.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Se você não existisse eu não teria aprendido a amar de um jeito tão bonito e especial.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Eu sinto sua falta, mesmo só estando longe de você há poucos instantes.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Mesmo antes de descobrir que te amava tanto, eu já sentia necessidade de estar com você.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Você me ouve.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Você se importa comigo.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Você me faz sentir ciúmes.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Me sinto bem com você</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Sou mais feliz quando estou ao seu lado.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Amo seu perfume.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Me esqueço de tudo quando olho nos seus olhos.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Penso em você em cada suspiro.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Com você passo os melhores momentos da minha vida.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Você que tem uma mágica que me envolve facilmente em teu olhar e  que ainda me faz sonhar ecomeço até a chorar só de pensar que posso te  perder em algum momento.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Eu não consigo parar de te amar.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Nada do que você faz ou fala vai mudar um sentimento que só faz aumentar.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Você coloriu o meu mundo.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Meu amor por você não pode se medir</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Amar você é a melhor coisa que eu sei fazer.</li>
+    <li style="padding:2px 0;font-size:11px;">💖 Você me entende.</li>
+  </ul>
+</div>
+</div>
+
+<!-- LISTA ANTES DA GALERIA DE FOTOS -->
+<p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+
+<!-- Texto com efeito: cole este bloco onde quiser -->
+<style>
+  /* Fonte opcional (remove se já estiver carregada globalmente) */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+  .efeito-texto-wrapper {
+    display: inline-block;
+    position: relative;
+    padding: 6px 14px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.02); /* sutil */
+    backdrop-filter: blur(4px);
+    cursor: default;
+    user-select: none;
+  }
+
+  .efeito-texto {
+    font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #ff7aab, #ffd36b, #7ee7ff, #b28cff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradMove 6s linear infinite, pulseGlow 2.8s ease-in-out infinite;
+    text-shadow: 0 6px 20px rgba(0,0,0,0.45);
+    display: inline-block;
+    transform-origin: center;
+    transition: transform .25s ease, filter .25s ease;
+    padding: 2px 6px;
+    border-radius: 8px;
+  }
+
+  /* glow pulse */
+  @keyframes pulseGlow {
+    0% { filter: drop-shadow(0 6px 18px rgba(178,140,255,0.25)); }
+    50% { filter: drop-shadow(0 10px 30px rgba(255,122,171,0.35)); }
+    100% { filter: drop-shadow(0 6px 18px rgba(178,140,255,0.25)); }
+  }
+
+  /* animated gradient */
+  @keyframes gradMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* hover efeito — levanta e cria partículas */
+  .efeito-texto-wrapper:hover .efeito-texto {
+    transform: translateY(-6px) rotate(-0.6deg) scale(1.03);
+    filter: brightness(1.06) saturate(1.1);
+  }
+
+  /* partículas simples com pseudo-elements */
+  .efeito-texto::before,
+  .efeito-texto::after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    inset: 0;
+    mix-blend-mode: screen;
+    opacity: 0;
+    transition: opacity .25s ease, transform .5s ease;
+  }
+
+  /* pequenos brilhos */
+  .efeito-texto::before {
+    background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.9) 0 2px, transparent 6px),
+                      radial-gradient(circle at 80% 60%, rgba(255,255,255,0.6) 0 2px, transparent 6px);
+    transform: scale(0.6);
+  }
+
+  .efeito-texto::after {
+    background-image: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.7) 0 2px, transparent 6px);
+    transform: scale(0.7);
+  }
+
+  .efeito-texto-wrapper:hover .efeito-texto::before,
+  .efeito-texto-wrapper:hover .efeito-texto::after {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* micro partículas via JS (posições aleatórias) */
+  .flare {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.6);
+    transition: transform 500ms cubic-bezier(.2,.8,.2,1), opacity 500ms ease;
+    will-change: transform, opacity;
+    mix-blend-mode: screen;
+  }
+</style>
+
+<span class="efeito-texto-wrapper" id="efeitoTextArea">
+  <span class="efeito-texto">Nossa galeria simplinha precisamos tirar mais fotos ✨</span>
+</span>
+
+<script>
+  // Cria partículas pequenas quando o usuário passa o mouse (ou toca)
+  (function(){
+    const wrapper = document.getElementById('efeitoTextArea');
+    if(!wrapper) return;
+
+    function spawnFlares(x, y, count = 6) {
+      for (let i=0;i<count;i++){
+        const f = document.createElement('div');
+        f.className = 'flare';
+        // cores suaves aleatórias
+        const colors = ['rgba(255,122,171,0.95)','rgba(255,211,107,0.95)','rgba(126,231,255,0.95)','rgba(178,140,255,0.95)'];
+        f.style.background = colors[Math.floor(Math.random()*colors.length)];
+        // posição inicial (relativa ao wrapper)
+        const rect = wrapper.getBoundingClientRect();
+        const px = x - rect.left;
+        const py = y - rect.top;
+        f.style.left = px + 'px';
+        f.style.top  = py + 'px';
+        document.body.appendChild(f);
+
+        // forçar reflow para transição
+        requestAnimationFrame(() => {
+          f.style.opacity = 1;
+          // mover em direção aleatória
+          const dx = (Math.random()-0.5) * 120;
+          const dy = (Math.random()-0.9) * 80 - 10;
+          f.style.transform = `translate(${dx}px, ${dy}px) scale(${1 + Math.random()*0.8})`;
+        });
+
+        // remove após animação
+        setTimeout(()=> {
+          f.style.opacity = 0;
+          f.style.transform += ' scale(0.2)';
+          setTimeout(()=> f.remove(), 450);
+        }, 420 + Math.random()*300);
+      }
+    }
+
+    // eventos - suporta mouse e toque
+    wrapper.addEventListener('mouseenter', (e)=>{
+      const evt = e.touches ? e.touches[0] : e;
+      spawnFlares(evt.clientX, evt.clientY, 8);
+    });
+    wrapper.addEventListener('mousemove', (e)=>{
+      if (e.buttons === 1 || e.movementX || e.movementY) {
+        spawnFlares(e.clientX, e.clientY, 2);
+      }
+    });
+    wrapper.addEventListener('touchstart', (e)=>{
+      const t = e.touches[0];
+      spawnFlares(t.clientX, t.clientY, 8);
+    });
+  })();
+</script>
+
+<p>ㅤㅤㅤㅤ</p>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Player Flutuante Minimalista</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #fff;
+  }
+
+  /* Botão de player flutuante */
+  .audio-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background: #1DB954;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: transform 0.2s;
+  }
+
+  .audio-btn:hover {
+    transform: scale(1.1);
+  }
+
+  /* Ícone play/pause */
+  .audio-btn::before {
+    content: '▶'; /* símbolo de play inicial */
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .audio-btn.playing::before {
+    content: '❚❚'; /* símbolo de pause quando tocando */
+  }
+
+  audio {
+    display: none; /* Esconde o player real */
+  }
+</style>
+</head>
+<body>
+
+  <button class="audio-btn" id="audioBtn"></button>
+  <audio id="meuAudio">
+    <source src="sound/musica.mp3" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
+
+  <script>
+    const audio = document.getElementById('meuAudio');
+    const btn = document.getElementById('audioBtn');
+
+    btn.addEventListener('click', () => {
+      if(audio.paused) {
+        audio.play();
+        btn.classList.add('playing');
+      } else {
+        audio.pause();
+        btn.classList.remove('playing');
+      }
+    });
+
+    // Tenta tocar automaticamente ao carregar
+    window.addEventListener('load', function() {
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Caso navegador bloqueie autoplay, nada acontece até o usuário clicar
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+<div class="magic-photo-grid" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; position:relative; z-index:1;">
+  <img src="img/1.jpeg" alt="Foto 1" class="magic-photo">
+  <img src="img/2.jpeg" alt="Foto 2" class="magic-photo">
+  <img src="img/3.jpeg" alt="Foto 3" class="magic-photo">
+  <img src="img/4.jpeg" alt="Foto 4" class="magic-photo">
+  <img src="img/5.jpeg" alt="Foto 5" class="magic-photo">
+  <img src="img/6.jpeg" alt="Foto 6" class="magic-photo">
+  <img src="img/7.jpeg" alt="Foto 7" class="magic-photo">
+  <img src="img/8.jpeg" alt="Foto 8" class="magic-photo">
+</div>
+
+<style>
+.magic-photo-grid img.magic-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  position: relative;
+  animation: wave 2s ease-in-out infinite, pulse 2s ease-in-out infinite;
+}
+
+/* ondas suaves */
+@keyframes wave {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0px); }
+}
+
+/* brilho pulsante */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0px rgba(255,182,193,0.4); }
+  50% { box-shadow: 0 0 12px rgba(255,182,193,0.7); }
+  100% { box-shadow: 0 0 0px rgba(255,182,193,0.4); }
+}
+
+/* corações que seguem as fotos */
+.heart {
+  position: absolute;
+  pointer-events: none;
+  width: 15px;
+  height: 15px;
+  background: url('img/heart.png') no-repeat center/contain;
+  animation: float 3s linear forwards;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-120px) rotate(360deg); opacity: 0; }
+}
+</style>
+
+<script>
+const photos = document.querySelectorAll('.magic-photo');
+
+// cria corações que seguem o movimento da onda de cada foto
+setInterval(() => {
+  photos.forEach((photo, index) => {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    const rect = photo.getBoundingClientRect();
+    
+    // calcula a posição vertical da onda para o coração seguir
+    const waveOffset = Math.sin((Date.now()/500) + index) * 4; 
+    heart.style.left = rect.left + rect.width/2 + 'px';
+    heart.style.top = rect.top + rect.height/2 + waveOffset + 'px';
+    
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 3000);
+  });
+}, 500);
+</script>
+
+
+<!-- PARTÍCULAS -->
+
+<!-- Partículas fofas com brilho -->
+<canvas id="particulas-fofas-brilho" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+"></canvas>
+
+<script>
+const canvas = document.getElementById('particulas-fofas-brilho');
+const ctx = canvas.getContext('2d');
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+const numParticles = 150; // mais partículas pequenas
+const particles = [];
+const colors = ['#FFC0CB', '#FFD1DC', '#FFB6C1', '#FF69B4', '#FF9ACD', '#F8BBD0', '#FDE2F3'];
+
+for (let i = 0; i < numParticles; i++) {
+    particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 3 + 1.5, // partículas menores
+        speedX: (Math.random() - 0.5) * 0.8,
+        speedY: (Math.random() - 0.5) * 0.8,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        shape: Math.random() > 0.5 ? 'heart' : 'star',
+        opacity: Math.random() * 0.6 + 0.4,
+        glow: Math.random() * 10 + 5 // brilho
+    });
+}
+
+function drawHeart(x, y, size, color, opacity, glow){
+    ctx.save();
+    ctx.shadowColor = color;
+    ctx.shadowBlur = glow;
+    ctx.fillStyle = color;
+    ctx.globalAlpha = opacity;
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    ctx.bezierCurveTo(x, y - size/2, x - size, y - size/2, x - size, y);
+    ctx.bezierCurveTo(x - size, y + size/2, x, y + size/1.5, x, y + size);
+    ctx.bezierCurveTo(x, y + size/1.5, x + size, y + size/2, x + size, y);
+    ctx.bezierCurveTo(x + size, y - size/2, x, y - size/2, x, y);
+    ctx.fill();
+    ctx.restore();
+    ctx.globalAlpha = 1;
+}
+
+function drawStar(cx, cy, spikes, outerRadius, innerRadius, color, opacity, glow) {
+    ctx.save();
+    ctx.shadowColor = color;
+    ctx.shadowBlur = glow;
+    ctx.fillStyle = color;
+    ctx.globalAlpha = opacity;
+
+    let rot = Math.PI / 2 * 3;
+    let x = cx;
+    let y = cy;
+    let step = Math.PI / spikes;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy - outerRadius)
+    for (let i = 0; i < spikes; i++) {
+        x = cx + Math.cos(rot) * outerRadius;
+        y = cy + Math.sin(rot) * outerRadius;
+        ctx.lineTo(x, y)
+        rot += step
+        x = cx + Math.cos(rot) * innerRadius;
+        y = cy + Math.sin(rot) * innerRadius;
+        ctx.lineTo(x, y)
+        rot += step
+    }
+    ctx.lineTo(cx, cy - outerRadius)
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+    ctx.globalAlpha = 1;
+}
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let p of particles) {
+        if (p.shape === 'heart') {
+            drawHeart(p.x, p.y, p.size, p.color, p.opacity, p.glow);
+        } else {
+            drawStar(p.x, p.y, 5, p.size, p.size/2, p.color, p.opacity, p.glow);
+        }
+
+        p.x += p.speedX;
+        p.y += p.speedY;
+
+        // rebater nas bordas
+        if(p.x < 0) p.x = canvas.width;
+        if(p.x > canvas.width) p.x = 0;
+        if(p.y < 0) p.y = canvas.height;
+        if(p.y > canvas.height) p.y = 0;
+    }
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+<p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+<p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+
+
+
+<div class="texto-fofo">
+  <p>
+    eu não te amo pela tua beleza, apesar de você ser linda, pois um dia ela acaba.  
+    não te amo por admiração, apesar de te admirar muito, pois um dia você se decepciona.  
+    eu te amo apenas, pois o tempo nunca pode acabar com um amor sem explicação.
+  </p>
+</div>
+
+<style>
+  .texto-fofo {
+    margin: 30px; /* margem para não encostar nas bordas */
+    font-family: "Helvetica Neue", Arial, sans-serif; /* fonte clean */
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify; /* deixa alinhado bonito */
+   
+  }
+</style>
+
+<!-- SURPRESA -->
+
+
+
+<!-- Botão fofo animado -->
+<button id="surpresa-btn" style="
+  position: relative;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd);
+  border: none;
+  margin: 75px;
+  padding: 20px 30px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 1000;
+  animation: brilho 3s infinite alternate;
+">me  aperte  muito 😅💘</button>
+
+<style>
+  @keyframes onda {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes brilho {
+    0% { box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); }
+    50% { box-shadow: 0 0 25px rgba(255, 105, 180, 1); }
+    100% { box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); }
+  }
+</style>
+
+<script>
+  const surpresaButton = document.getElementById('surpresa-btn');
+
+  const textosFofos = [
+    "Te Amo 💖", "Você é incrível 🌸", "Sorria 😄", 
+    "Você é linda 🌟", "Amor 💕", "Beijos 😘",
+    "Coração ❤️", "Fofura 😍", "Brilho ✨", "Alegria 🌈"
+  ];
+
+  const coresFofas = ['#ff9a9e','#fad0c4','#fbc2eb','#a1c4fd','#ffecd2','#fcb69f','#c2e9fb','#d4fc79','#96e6a1'];
+
+  function criarElementoFofo() {
+    const el = document.createElement('div');
+    el.style.position = 'fixed';
+    el.style.pointerEvents = 'none';
+    el.style.fontWeight = 'bold';
+    el.style.fontSize = 16 + Math.random() * 24 + 'px';
+    el.style.color = coresFofas[Math.floor(Math.random() * coresFofas.length)];
+    el.style.left = Math.random() * window.innerWidth + 'px';
+    el.style.top = Math.random() * window.innerHeight + 'px';
+    el.style.zIndex = 9999;
+    el.innerText = textosFofos[Math.floor(Math.random() * textosFofos.length)];
+    
+    document.body.appendChild(el);
+
+    el.animate([
+      { transform: 'translateY(0) rotate(0deg) scale(1)', opacity: 1 },
+      { transform: `translateY(-${200 + Math.random()*300}px) rotate(${Math.random()*360}deg) scale(0.5)`, opacity: 0 }
+    ], {
+      duration: 2500 + Math.random()*500,
+      easing: 'ease-out'
+    });
+
+    setTimeout(() => el.remove(), 3000);
+  }
+
+  surpresaButton.addEventListener('click', () => {
+    const interval = setInterval(criarElementoFofo, 50);
+    setTimeout(() => clearInterval(interval), 3000);
+  });
+
+  // efeitos hover adicionais
+  surpresaButton.addEventListener('mouseenter', () => {
+    surpresaButton.style.transform = 'scale(1.15)';
+    surpresaButton.style.boxShadow = '0 0 35px rgba(255, 105, 180, 1)';
+  });
+  surpresaButton.addEventListener('mouseleave', () => {
+    surpresaButton.style.transform = 'scale(1)';
+    surpresaButton.style.boxShadow = '0 0 15px rgba(255, 105, 180, 0.6)';
+  });
+</script>
+
+
+<p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+<p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+
+<!-- TÍTULO FOFO-->
+
+<!-- Título estilo carta de amor com brilho piscante e partículas pastel -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caviar+Dreams&display=swap');
+
+  /* Container do título com partículas */
+  .love-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin: 40px 0;
+    z-index: 1;
+  }
+
+  /* Partículas pastel */
+  .love-container::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    background: radial-gradient(circle, #ff9ecb 10%, transparent 10%),
+                radial-gradient(circle, #ffecd1 10%, transparent 10%),
+                radial-gradient(circle, #a0e7e5 10%, transparent 10%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px, 5px 15px;
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 15px;
+  }
+
+  .love-title {
+    font-family: 'Caviar Dreams', sans-serif;
+    font-size: 2.5em;
+    color: #ff4d6d;
+    text-shadow: 2px 2px 5px #ffa6b9;
+    margin: 0;
+    transition: color 0.3s, text-shadow 0.3s;
+    cursor: pointer;
+    animation: glow 2s infinite alternate;
+  }
+
+  @keyframes glow {
+    0% { text-shadow: 2px 2px 5px #ffa6b9; }
+    50% { text-shadow: 2px 2px 15px #ffb6c1, 0 0 20px #ffccd5; }
+    100% { text-shadow: 2px 2px 5px #ffa6b9; }
+  }
+
+  /* Brilho e mudança de cor ao toque */
+  .love-title:hover {
+    color: #ff85a2;
+    text-shadow: 0 0 10px #ff85a2, 0 0 20px #ffb6c1, 0 0 30px #ffccd5;
+  }
+
+  .love-title span {
+    color: #ff6b81;
+    margin: 0 0.2em;
+  }
+</style>
+
+<!-- Componente isolado: cole tudo junto -->
+<fofinho-text text="Para minha princesa ❤️" count="20"></fofinho-text>
+
+<script>
+class FofinhoText extends HTMLElement {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({ mode: 'open' });
+
+    const text = this.getAttribute('text') || 'Para minha princesa ❤️';
+    const count = parseInt(this.getAttribute('count')) || 18;
+
+    shadow.innerHTML = `
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
+        :host { display: inline-block; font-size: 16px; }
+        .root {
+          position: relative;
+          display: inline-block;
+          padding: 12px 22px;
+          border-radius: 22px;
+          background: rgba(255,255,255,0.03);
+          backdrop-filter: blur(6px);
+          overflow: visible;
+        }
+
+        .text {
+          font-family: 'Quicksand', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 1;
+          background: linear-gradient(90deg, #ffb6d9, #ffe6a7, #b6f0ff, #d7b6ff);
+          background-size: 300% 300%;
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          animation: gradMove 6s ease infinite, brilho 3s ease-in-out infinite;
+          text-shadow: 0 0 12px rgba(255,182,217,0.35);
+          display: inline-block;
+          transition: transform .28s ease;
+        }
+
+        @keyframes gradMove {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        @keyframes brilho {
+          0%,100% { filter: drop-shadow(0 0 6px rgba(255,200,230,0.6)); }
+          50% { filter: drop-shadow(0 0 16px rgba(255,230,180,0.8)); }
+        }
+
+        .root:hover .text { transform: scale(1.05) rotate(-1deg); }
+
+        .particle {
+          position: absolute;
+          border-radius: 50%;
+          opacity: 0.85;
+          pointer-events: none;
+          will-change: transform, opacity;
+          animation-name: floatAnim, fadeAnim;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+        }
+
+        @keyframes floatAnim {
+          0%   { transform: translateY(0) scale(1); }
+          50%  { transform: translateY(-36px) scale(1.18); }
+          100% { transform: translateY(0) scale(1); }
+        }
+        @keyframes fadeAnim {
+          0% { opacity: 0.7; }
+          50% { opacity: 1; }
+          100% { opacity: 0.7; }
+        }
+      </style>
+
+      <div class="root" part="root">
+        <span class="text" part="text">${text}</span>
+      </div>
+    `;
+
+    // cria partículas dentro do shadow DOM para evitar conflitos
+    const root = shadow.querySelector('.root');
+    const colors = ['#ffb6d9', '#ffe6a7', '#b6f0ff', '#d7b6ff', '#c0ffc7'];
+
+    for (let i = 0; i < count; i++) {
+      const p = document.createElement('span');
+      p.className = 'particle';
+      const size = Math.random() * 8 + 6; // 6px - 14px
+      p.style.width = p.style.height = `${size}px`;
+      p.style.background = colors[Math.floor(Math.random() * colors.length)];
+      // posição relativa ao container: porcentagem evita cálculo de bounding rect
+      p.style.left = `${Math.random() * 100}%`;
+      p.style.top = `${Math.random() * 100}%`;
+      // variação na duração e atraso
+      const dur = (4 + Math.random() * 4).toFixed(2) + 's';
+      const delay = (Math.random() * -4).toFixed(2) + 's'; // inicia em offsets diferentes
+      p.style.animationDuration = `${dur}, ${dur}`;
+      p.style.animationDelay = `${delay}, ${delay}`;
+      root.appendChild(p);
+    }
+  }
+}
+
+customElements.define('fofinho-text', FofinhoText);
+</script>
+<p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+
+<!-- Fundo escuro transparente com blur e brilho -->
+<style>
+  .blur-escuro {
+    background: rgba(0, 0, 0, 0.35); /* mais escuro e transparente */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 16px 24px;
+    border-radius: 18px;
+    color: #fff;
+    font-family: 'Quicksand', system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 182, 217, 0.15),
+                0 0 35px rgba(200, 150, 255, 0.1);
+    text-align: center;
+    animation: glowPulse 4s ease-in-out infinite;
+  }
+
+  /* Efeito de brilho pulsante */
+  @keyframes glowPulse {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(255, 182, 217, 0.15),
+                  0 0 35px rgba(200, 150, 255, 0.1);
+    }
+    50% {
+      box-shadow: 0 0 25px rgba(255, 182, 217, 0.4),
+                  0 0 55px rgba(200, 150, 255, 0.25);
+    }
+  }
+
+  /* Brilhinhos extras no fundo */
+  .blur-escuro::before,
+  .blur-escuro::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 70%);
+    opacity: 0.4;
+    animation: sparkle 6s infinite ease-in-out;
+  }
+
+  .blur-escuro::before {
+    width: 120px;
+    height: 120px;
+    top: -40px;
+    left: -40px;
+    animation-delay: 0s;
+  }
+
+  .blur-escuro::after {
+    width: 100px;
+    height: 100px;
+    bottom: -30px;
+    right: -30px;
+    animation-delay: 3s;
+  }
+
+  @keyframes sparkle {
+    0%, 100% { opacity: 0.2; transform: scale(0.8) rotate(0deg); }
+    50%      { opacity: 0.6; transform: scale(1.1) rotate(180deg); }
+  }
+</style>
+
+<!-- Fundo totalmente transparente com blur leve e brilho -->
+<style>
+  .blur-transparente {
+    background: rgba(255, 255, 255, 0); /* totalmente transparente */
+    backdrop-filter: blur(6px); 
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 18px;
+    color: #fff;
+    font-family: 'Quicksand', system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 16px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    /* brilho suave */
+    box-shadow: 0 0 20px rgba(255, 182, 217, 0.15),
+                0 0 35px rgba(200, 150, 255, 0.12);
+    animation: glowPulse 4s ease-in-out infinite;
+  }
+
+  @keyframes glowPulse {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(255, 182, 217, 0.12),
+                  0 0 30px rgba(200, 150, 255, 0.08);
+    }
+    50% {
+      box-shadow: 0 0 25px rgba(255, 182, 217, 0.3),
+                  0 0 50px rgba(200, 150, 255, 0.2);
+    }
+  }
+
+  /* brilhinhos extras */
+  .blur-transparente::before,
+  .blur-transparente::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, transparent 70%);
+    opacity: 0.4;
+    animation: sparkle 6s infinite ease-in-out;
+  }
+
+  .blur-transparente::before {
+    width: 120px;
+    height: 120px;
+    top: -40px;
+    left: -40px;
+    animation-delay: 0s;
+  }
+
+  .blur-transparente::after {
+    width: 100px;
+    height: 100px;
+    bottom: -30px;
+    right: -30px;
+    animation-delay: 3s;
+  }
+
+  @keyframes sparkle {
+    0%, 100% { opacity: 0.2; transform: scale(0.8) rotate(0deg); }
+    50%      { opacity: 0.6; transform: scale(1.1) rotate(180deg); }
+  }
+</style>
+
+<div class="blur-transparente">
+<p>
+Você me faz sorrir todos os dias<br>
+Seu abraço é meu lugar favorito<br>
+Eu amo a sua voz
+</p>
+
+<p>
+se eu não deixo isso claro todos os dias, fique sabendo agora 😄
+</p>
+
+<p>você é a pessoa mais importante pra mim e eu te amo com todas as minhas forças, meu denguinho. 😄</p>
+
+
+esses dias, que viraram semanas e então meses, </<p>foram os melhores que eu poderia querer, independente.</p> 
+
+
+<p>na vida nem tudo são flores, e mesmo se fosse, ainda haveria os espinhos. mas como já te disse centenas de vezes, amar é botar as prioridades do outro acima das nossas, e eu tenho mãos dispostas a sangrar por você, por nós.</p>
+
+
+
+<p>é te observando, entendendo e absorvendo o teu jeito, que eu vejo que te amo cada dia mais, porquê apesar de todas as coisas que você considera defeito em si própria, eu só consigo enxergar o quanto vc é dedicada.</p>
+
+
+
+sou simplesmente apaixonado em você e em tudo o que você faz. obrigado por estar disposta a fazer dos meus dias sempre melhores, e estar comigo quando preciso. você é uma pessoa incrível e eu tenho muita sorte por namorar você e pode chamar te chamar de amor.
+
+eu te amo de montão, feliz nosso dia, se bem que todo dia é nosso dia ❤️ 
+</div>
+
+
+
+..<!-- particulas estilos notificações-->
+
+<!-- Notificações fofinhas com partículas -->
+<style>
+  .romantic-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 182, 193, 0.9);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.6);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+    z-index: 9999;
+    overflow: hidden;
+  }
+
+  .romantic-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Partículas / corações flutuantes */
+  .heart {
+    position: absolute;
+    font-size: 14px;
+    animation: floatUp 3s ease forwards;
+    pointer-events: none;
+  }
+
+  @keyframes floatUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-60px) scale(1.3);
+    }
+  }
+</style>
+
+<div id="notification" class="romantic-notification"></div>
+
+<script>
+  const messages = [
+    "você é o ponto e vírgula que faltava 💖",
+    "você é um rastreamento de pilha que tô lendo há dias🌸",
+    "Saudades 😘",
+    "Você me faz sorrir 😍",
+    "Meu coração é seu ❤️",
+    "sou capaz de atravessar a cidade de bicicleta pra te ver e isso diz muito sobre minha caixa torácica😮‍💨"
+  ];
+
+  function createHeart(notification) {
+    const heart = document.createElement('span');
+    heart.className = 'heart';
+    heart.textContent = '💖';
+    heart.style.left = Math.random() * (notification.offsetWidth - 20) + 'px';
+    heart.style.fontSize = (10 + Math.random() * 15) + 'px';
+    notification.appendChild(heart);
+    setTimeout(() => heart.remove(), 3000);
+  }
+
+  function showNotification() {
+    const notification = document.getElementById('notification');
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    notification.textContent = randomMessage;
+    notification.classList.add('show');
+
+    // Criar vários corações
+    for (let i = 0; i < 5; i++) {
+      setTimeout(() => createHeart(notification), i * 200);
+    }
+
+    // Desaparece depois de 3 segundos
+    setTimeout(() => {
+      notification.classList.remove('show');
+    }, 3000);
+  }
+
+  // Mostrar uma notificação a cada 10 segundos
+  setInterval(showNotification, 10000);
+
+  // Mostrar a primeira notificação imediatamente
+  showNotification();
+</script>
+
+
+<!-- Pré-loader de coração fullscreen -->
+<style>
+  /* Pré-loader ocupa a tela inteira */
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000cc; /* fundo semi-transparente escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  #preloader img {
+    width: 200px; /* tamanho do GIF */
+    height: 200px;
+  }
+
+  /* Fade out do pré-loader */
+  .fade-out {
+    animation: fadeOut 1s forwards;
+  }
+
+  @keyframes fadeOut {
+    to { opacity: 0; visibility: hidden; }
+  }
+
+  /* Esconde o conteúdo da página até o pré-loader sumir */
+  body.hidden {
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  body.show-content {
+    overflow: auto;
+  }
+</style>
+
+<div id="preloader">
+  <img src="img/coracao.gif" alt="Carregando... ❤️">
+</div>
+
+<script>
+  // Esconde o conteúdo da página enquanto o pré-loader está ativo
+  document.body.classList.add('hidden');
+
+  window.addEventListener('load', () => {
+    // Mantém o pré-loader por 2 segundos antes de sumir
+    setTimeout(() => {
+      const preloader = document.getElementById('preloader');
+      preloader.classList.add('fade-out');
+      
+      // Mostra o conteúdo da página após o fade-out
+      setTimeout(() => {
+        document.body.classList.remove('hidden');
+        document.body.classList.add('show-content');
+        preloader.remove();
+      }, 1000); // tempo do fade-out
+    }, 2000); // tempo que o GIF fica visível
+  });
+</script>
+
